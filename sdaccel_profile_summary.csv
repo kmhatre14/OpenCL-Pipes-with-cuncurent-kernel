@@ -1,0 +1,88 @@
+SDAccel Profile Summary
+Generated on: 2019-08-19 23:42:38
+Msec since Epoch: 1566258158642
+Profiled application: helloworld
+Target platform: Xilinx
+Tool version: 2018.3
+Target devices: xilinx_aws-vu9p-f1-04261818_dynamic_5_0-0
+Flow mode: CPU Emulation
+
+OpenCL API Calls
+API Name,Number Of Calls,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),
+clCreateProgramWithBinary,1,14.1264,14.1264,14.1264,14.1264,
+clWaitForEvents,1,4.13925,4.13925,4.13925,4.13925,
+clEnqueueNDRangeKernel,2,0.816929,0.11905,0.408464,0.697879,
+clEnqueueWriteBuffer,1,0.282317,0.282317,0.282317,0.282317,
+clEnqueueReadBuffer,1,0.177599,0.177599,0.177599,0.177599,
+clSetKernelArg,2,0.07979,0.009719,0.039895,0.070071,
+clGetExtensionFunctionAddress,2,0.045051,0.004989,0.0225255,0.040062,
+clGetPlatformInfo,12,0.043267,0.003186,0.00360558,0.006377,
+clCreateKernel,2,0.027756,0.006737,0.013878,0.021019,
+clCreateBuffer,2,0.022125,0.004416,0.0110625,0.017709,
+clBuildProgram,1,0.012911,0.012911,0.012911,0.012911,
+clCreateContext,1,0.010727,0.010727,0.010727,0.010727,
+clGetEventProfilingInfo,2,0.010369,0.004524,0.0051845,0.005845,
+clReleaseMemObject,1,0.009491,0.009491,0.009491,0.009491,
+clGetDeviceIDs,1,0.008611,0.008611,0.008611,0.008611,
+clReleaseKernel,2,0.008137,0.003817,0.0040685,0.00432,
+clCreateCommandQueue,1,0.00802,0.00802,0.00802,0.00802,
+clFinish,1,0.006517,0.006517,0.006517,0.006517,
+clReleaseProgram,1,0.004393,0.004393,0.004393,0.004393,
+clReleaseCommandQueue,1,0.004355,0.004355,0.004355,0.004355,
+clReleaseContext,1,0.004154,0.004154,0.004154,0.004154,
+
+
+Kernel Execution
+Kernel,Number Of Enqueues,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),
+kernel0,1,4.66584,4.66584,4.66584,4.66584,
+kernel1,1,4.72403,4.72403,4.72403,4.72403,
+
+
+Compute Unit Utilization
+Device,Compute Unit,Kernel,Global Work Size,Local Work Size,Number Of Calls,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),Clock Frequency (MHz),
+xilinx_aws-vu9p-f1-04261818_dynamic_5_0-0,kernel0_1,kernel0,10:1:1,1:1:1,10,2.9823,0.002537,0.29823,0.458363,300,
+xilinx_aws-vu9p-f1-04261818_dynamic_5_0-0,kernel1_1,kernel1,10:1:1,1:1:1,10,2.51107,0.002359,0.251107,0.703641,300,
+
+
+Data Transfer: Host and Global Memory
+Context:Number of Devices,Transfer Type,Number Of Transfers,Transfer Rate (MB/s),Average Bandwidth Utilization (%),Average Size (KB),Total Time (ms),Average Time (ms),
+
+
+Data Transfer: Kernels and Global Memory
+Device,Compute Unit/Port Name,Kernel Arguments,Memory Resources,Transfer Type,Number Of Transfers,Transfer Rate (MB/s),Average Bandwidth Utilization (%),Average Size (KB),Average Latency (ns),
+
+
+Top Data Transfer: Kernels and Global Memory
+Device,Compute Unit,Number of Transfers,Average Bytes per Transfer,Transfer Efficiency (%),Total Data Transfer (MB),Total Write (MB),Total Read (MB),Total Transfer Rate (MB/s),
+
+
+Top Kernel Execution
+Kernel Instance Address,Kernel,Context ID,Command Queue ID,Device,Start Time (ms),Duration (ms),Global Work Size,Local Work Size,
+20274464,kernel1,0,0,xilinx_aws-vu9p-f1-04261818_dynamic_5_0-0,20.2519,4.72403,10:1:1,1:1:1,
+20273328,kernel0,0,0,xilinx_aws-vu9p-f1-04261818_dynamic_5_0-0,20.3501,4.66584,10:1:1,1:1:1,
+
+
+Top Buffer Writes
+Buffer Address,Context ID,Command Queue ID,Start Time (ms),Duration (ms),Buffer Size (KB),Writing Rate(MB/s),
+0,0,0,20.1066,N/A,1,N/A,
+
+
+Top Buffer Reads
+Buffer Address,Context ID,Command Queue ID,Start Time (ms),Duration (ms),Buffer Size (KB),Reading Rate(MB/s),
+4096,0,0,25.1346,N/A,1,N/A,
+
+
+PRC Parameters
+Parameter,Element,Value,
+DEVICE_EXEC_TIME,xilinx_aws-vu9p-f1-04261818_dynamic_5_0-0,4.764067,
+CU_CALLS,xilinx_aws-vu9p-f1-04261818_dynamic_5_0-0|kernel0_1,10,
+CU_CALLS,xilinx_aws-vu9p-f1-04261818_dynamic_5_0-0|kernel1_1,10,
+MEMORY_BIT_WIDTH,xilinx_aws-vu9p-f1-04261818_dynamic_5_0-0,512,
+MIGRATE_MEM,host,0,
+DDR_BANKS,,2,
+PORT_BIT_WIDTH,kernel1_1/m_axi_gmem,32,
+PORT_BIT_WIDTH,kernel0_1/m_axi_gmem,32,
+KERNEL_COUNT,kernel0,1,
+KERNEL_COUNT,kernel1,1,
+OBJECTS_RELEASED,all,0,
+

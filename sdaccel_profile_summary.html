@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<HTML>
+<BODY>
+<STYLE>
+	h1 {
+		font-size:200%;
+	}
+	table th,tr,td {
+		border-collapse: collapse; /* share common border between cells */
+		padding: 4px; /* padding within cells */
+		table-layout : fixed
+	}
+	table th {
+	background-color:lightsteelblue
+	}
+	/* Tooltip container */
+		.tooltip {
+		position: relative;
+		display: inline-block;
+	}
+	/* Tooltip text */
+	.tooltip .tooltiptext {
+		visibility: hidden;
+		width: 600px;
+		background-color: #555;
+		color: #fff;
+		text-align: left;
+		padding: 5px 0;
+		border-radius: 6px;
+		/* Position the tooltip text */
+		position: absolute;
+		z-index: 1;
+		bottom: 125%;
+		left: -100%;
+		margin-left: -60px;
+		/* Fade in tooltip */
+		opacity: 0;
+		transition: opacity 1s;
+	}
+	/* Tooltip arrow */
+	.tooltip .tooltiptext::after {
+		content: ;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin-left: -5px;
+		border-width: 5px;
+		border-style: solid;
+		border-color: #555 transparent transparent transparent;
+	}
+	/* Show the tooltip text when you mouse over the tooltip container */
+	.tooltip:hover .tooltiptext {
+		visibility: visible;
+		opacity: 1;
+	}
+</STYLE>
+<h1>SDAccel Profile Summary</h1>
+<br>
+<h3>Application: helloworld</h3>
+<h3>Created: 2019-08-19 23:42:38</h3>
+<h3>Devices: xilinx_aws-vu9p-f1-04261818_dynamic_5_0-0</h3>
+<h3>Msec: 1566258158642</h3>
+<h3>Report name: Profile Summary</h3>
+<h3>Target: CPU Emulation</h3>
+<h3>Tool version: 2018.3</h3>
+<br>
+<h2>OpenCL API Calls</h2>
+
+<TABLE border="1">
+<TR>
+<TH>API Name</TH>
+<TH>Number<br>Of Calls</TH>
+<TH>Total<br>Time (ms)</TH>
+<TH>Minimum<br>Time (ms)</TH>
+<TH>Average<br>Time (ms)</TH>
+<TH>Maximum<br>Time (ms)</TH>
+</TR>
+<TR>
+<TD>clCreateProgramWithBinary</TD>
+<TD>1</TD>
+<TD>14.126</TD>
+<TD>14.126</TD>
+<TD>14.126</TD>
+<TD>14.126</TD>
+</TR>
+<TR>
+<TD>clWaitForEvents</TD>
+<TD>1</TD>
+<TD>4.139</TD>
+<TD>4.139</TD>
+<TD>4.139</TD>
+<TD>4.139</TD>
+</TR>
+<TR>
+<TD>clEnqueueNDRangeKernel</TD>
+<TD>2</TD>
+<TD>0.817</TD>
+<TD>0.119</TD>
+<TD>0.408</TD>
+<TD>0.698</TD>
+</TR>
+<TR>
+<TD>clEnqueueWriteBuffer</TD>
+<TD>1</TD>
+<TD>0.282</TD>
+<TD>0.282</TD>
+<TD>0.282</TD>
+<TD>0.282</TD>
+</TR>
+<TR>
+<TD>clEnqueueReadBuffer</TD>
+<TD>1</TD>
+<TD>0.178</TD>
+<TD>0.178</TD>
+<TD>0.178</TD>
+<TD>0.178</TD>
+</TR>
+<TR>
+<TD>clSetKernelArg</TD>
+<TD>2</TD>
+<TD>0.080</TD>
+<TD>0.010</TD>
+<TD>0.040</TD>
+<TD>0.070</TD>
+</TR>
+<TR>
+<TD>clGetExtensionFunctionAddress</TD>
+<TD>2</TD>
+<TD>0.045</TD>
+<TD>0.005</TD>
+<TD>0.023</TD>
+<TD>0.040</TD>
+</TR>
+<TR>
+<TD>clGetPlatformInfo</TD>
+<TD>12</TD>
+<TD>0.043</TD>
+<TD>0.003</TD>
+<TD>0.004</TD>
+<TD>0.006</TD>
+</TR>
+<TR>
+<TD>clCreateKernel</TD>
+<TD>2</TD>
+<TD>0.028</TD>
+<TD>0.007</TD>
+<TD>0.014</TD>
+<TD>0.021</TD>
+</TR>
+<TR>
+<TD>clCreateBuffer</TD>
+<TD>2</TD>
+<TD>0.022</TD>
+<TD>0.004</TD>
+<TD>0.011</TD>
+<TD>0.018</TD>
+</TR>
+<TR>
+<TD>clBuildProgram</TD>
+<TD>1</TD>
+<TD>0.013</TD>
+<TD>0.013</TD>
+<TD>0.013</TD>
+<TD>0.013</TD>
+</TR>
+<TR>
+<TD>clCreateContext</TD>
+<TD>1</TD>
+<TD>0.011</TD>
+<TD>0.011</TD>
+<TD>0.011</TD>
+<TD>0.011</TD>
+</TR>
+<TR>
+<TD>clGetEventProfilingInfo</TD>
+<TD>2</TD>
+<TD>0.010</TD>
+<TD>0.005</TD>
+<TD>0.005</TD>
+<TD>0.006</TD>
+</TR>
+<TR>
+<TD>clReleaseMemObject</TD>
+<TD>1</TD>
+<TD>0.009</TD>
+<TD>0.009</TD>
+<TD>0.009</TD>
+<TD>0.009</TD>
+</TR>
+<TR>
+<TD>clGetDeviceIDs</TD>
+<TD>1</TD>
+<TD>0.009</TD>
+<TD>0.009</TD>
+<TD>0.009</TD>
+<TD>0.009</TD>
+</TR>
+<TR>
+<TD>clReleaseKernel</TD>
+<TD>2</TD>
+<TD>0.008</TD>
+<TD>0.004</TD>
+<TD>0.004</TD>
+<TD>0.004</TD>
+</TR>
+<TR>
+<TD>clCreateCommandQueue</TD>
+<TD>1</TD>
+<TD>0.008</TD>
+<TD>0.008</TD>
+<TD>0.008</TD>
+<TD>0.008</TD>
+</TR>
+<TR>
+<TD>clFinish</TD>
+<TD>1</TD>
+<TD>0.007</TD>
+<TD>0.007</TD>
+<TD>0.007</TD>
+<TD>0.007</TD>
+</TR>
+<TR>
+<TD>clReleaseProgram</TD>
+<TD>1</TD>
+<TD>0.004</TD>
+<TD>0.004</TD>
+<TD>0.004</TD>
+<TD>0.004</TD>
+</TR>
+<TR>
+<TD>clReleaseCommandQueue</TD>
+<TD>1</TD>
+<TD>0.004</TD>
+<TD>0.004</TD>
+<TD>0.004</TD>
+<TD>0.004</TD>
+</TR>
+<TR>
+<TD>clReleaseContext</TD>
+<TD>1</TD>
+<TD>0.004</TD>
+<TD>0.004</TD>
+<TD>0.004</TD>
+<TD>0.004</TD>
+</TR>
+</TABLE>
+<br>
+<h2>Kernel Execution</h2>
+
+<TABLE border="1">
+<TR>
+<TH>Kernel</TH>
+<TH>Number Of<br>Enqueues</TH>
+<TH>Total<br>Time (ms)</TH>
+<TH>Minimum<br>Time (ms)</TH>
+<TH>Average<br>Time (ms)</TH>
+<TH>Maximum<br>Time (ms)</TH>
+</TR>
+<TR>
+<TD>kernel0</TD>
+<TD>1</TD>
+<TD>4.666</TD>
+<TD>4.666</TD>
+<TD>4.666</TD>
+<TD>4.666</TD>
+</TR>
+<TR>
+<TD>kernel1</TD>
+<TD>1</TD>
+<TD>4.724</TD>
+<TD>4.724</TD>
+<TD>4.724</TD>
+<TD>4.724</TD>
+</TR>
+</TABLE>
+<br>
+<h2>Compute Unit Utilization</h2>
+
+<TABLE border="1">
+<TR>
+<TH>Device</TH>
+<TH>Compute Unit</TH>
+<TH>Kernel</TH>
+<TH>Global<br>Work Size</TH>
+<TH>Local<br>Work Size</TH>
+<TH>Number<br>Of Calls</TH>
+<TH>Total<br>Time (ms)</TH>
+<TH>Minimum<br>Time (ms)</TH>
+<TH>Average<br>Time (ms)</TH>
+<TH>Maximum<br>Time (ms)</TH>
+<TH>Clock<br>Frequency (MHz)</TH>
+</TR>
+<TR>
+<TD>xilinx_aws-vu9p-f1-04261818_dynamic_5_0-0</TD>
+<TD>kernel0_1</TD>
+<TD>kernel0</TD>
+<TD>10:1:1</TD>
+<TD>1:1:1</TD>
+<TD>10</TD>
+<TD>2.982</TD>
+<TD>0.003</TD>
+<TD>0.298</TD>
+<TD>0.458</TD>
+<TD>300</TD>
+</TR>
+<TR>
+<TD>xilinx_aws-vu9p-f1-04261818_dynamic_5_0-0</TD>
+<TD>kernel1_1</TD>
+<TD>kernel1</TD>
+<TD>10:1:1</TD>
+<TD>1:1:1</TD>
+<TD>10</TD>
+<TD>2.511</TD>
+<TD>0.002</TD>
+<TD>0.251</TD>
+<TD>0.704</TD>
+<TD>300</TD>
+</TR>
+</TABLE>
+<br>
+<h2>Data Transfer: Host and Global Memory</h2>
+
+<TABLE border="1">
+<TR>
+<TH>Context:Number<br>of Devices</TH>
+<TH>Transfer Type</TH>
+<TH>Number Of<br>Transfers</TH>
+<TH>Transfer<br>Rate (MB/s)</TH>
+<TH>Average Bandwidth<br>Utilization (%)</TH>
+<TH>Average<br>Size (KB)</TH>
+<TH>Total<br>Time (ms)</TH>
+<TH>Average<br>Time (ms)</TH>
+</TR>
+<TD colspan="8">No Data. Run Hardware Emulation or on Hardware Platform to get data.</TD>
+</TABLE>
+<br>
+<h2>Data Transfer: Kernels and Global Memory</h2>
+
+<TABLE border="1">
+<TR>
+<TH>Device</TH>
+<TH>Compute Unit/<br>Port Name</TH>
+<TH>Kernel Arguments</TH>
+<TH>Memory Resources</TH>
+<TH>Transfer Type</TH>
+<TH>Number Of<br>Transfers</TH>
+<TH>Transfer<br>Rate (MB/s)</TH>
+<TH>Average Bandwidth<br>Utilization (%)</TH>
+<TH>Average<br>Size (KB)</TH>
+<TH>Average<br>Latency (ns)</TH>
+</TR>
+<TD colspan="10">No Data. Run Hardware Emulation or on Hardware Platform to get data.</TD>
+</TABLE>
+<br>
+<h2>Top Data Transfer: Kernels and Global Memory</h2>
+
+<TABLE border="1">
+<TR>
+<TH>Device</TH>
+<TH>Compute Unit</TH>
+<TH>Number Of<br>Transfers</TH>
+<TH>Average Bytes<br>per Transfer</TH>
+<TH>Transfer<br>Efficiency (%)</TH>
+<TH>Total Data<br>Transfer (MB)</TH>
+<TH>Total<br>Write (MB)</TH>
+<TH>Total<br>Read (MB)</TH>
+<TH>Total Transfer<br>Rate (MB/s)</TH>
+</TR>
+<TD colspan="9">No Data. Run Hardware Emulation or on Hardware Platform to get data.</TD>
+</TABLE>
+<br>
+<h2>Top Kernel Execution</h2>
+
+<TABLE border="1">
+<TR>
+<TH>Kernel Instance<br>Address</TH>
+<TH>Kernel</TH>
+<TH>Context ID</TH>
+<TH>Command<br>Queue ID</TH>
+<TH>Device</TH>
+<TH>Start<br>Time (ms)</TH>
+<TH>Duration (ms)</TH>
+<TH>Global<br>Work Size</TH>
+<TH>Local<br>Work Size</TH>
+</TR>
+<TR>
+<TD>0x1355d20</TD>
+<TD>kernel1</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>xilinx_aws-vu9p-f1-04261818_dynamic_5_0-0</TD>
+<TD>20.252</TD>
+<TD>4.724</TD>
+<TD>10:1:1</TD>
+<TD>1:1:1</TD>
+</TR>
+<TR>
+<TD>0x13558b0</TD>
+<TD>kernel0</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>xilinx_aws-vu9p-f1-04261818_dynamic_5_0-0</TD>
+<TD>20.350</TD>
+<TD>4.666</TD>
+<TD>10:1:1</TD>
+<TD>1:1:1</TD>
+</TR>
+</TABLE>
+<br>
+<h2>Top Memory Writes: Host and Device Global Memory</h2>
+
+<TABLE border="1">
+<TR>
+<TH>Buffer Address</TH>
+<TH>Context ID</TH>
+<TH>Command<br>Queue ID</TH>
+<TH>Start<br>Time (ms)</TH>
+<TH>Duration (ms)</TH>
+<TH>Buffer Size (KB)</TH>
+<TH>Writing<br>Rate (MB/s)</TH>
+</TR>
+<TR>
+<TD>0x0</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>20.107</TD>
+<TD>N/A</TD>
+<TD>1.000</TD>
+<TD>N/A</TD>
+</TR>
+</TABLE>
+<br>
+<h2>Top Memory Reads: Host and Device Global Memory</h2>
+
+<TABLE border="1">
+<TR>
+<TH>Buffer Address</TH>
+<TH>Context ID</TH>
+<TH>Command<br>Queue ID</TH>
+<TH>Start<br>Time (ms)</TH>
+<TH>Duration (ms)</TH>
+<TH>Buffer Size (KB)</TH>
+<TH>Reading<br>Rate (MB/s)</TH>
+</TR>
+<TR>
+<TD>0x1000</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>25.135</TD>
+<TD>N/A</TD>
+<TD>1.000</TD>
+<TD>N/A</TD>
+</TR>
+</TABLE>
