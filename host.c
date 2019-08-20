@@ -1,11 +1,10 @@
 /****************************************************************************
  *               University of North Carolina Charlotte                     *
- *                        MobileNet V1 CNN                                  *
+ *                 OpenCL pipes with cuncurent kernels                      *
  *                        				                                    *
  *                                                                          *
  *                                                                          *
- *   Author:    1. Kaustubh Manohar Mhatre                                  *
- *              2. Ushma Bharucha                                           *
+ *   Author:    1. Kaustubh Manohar Mhatre (^_^)                            *
  *   Date: 08 June 2019														*
  ****************************************************************************/
 
